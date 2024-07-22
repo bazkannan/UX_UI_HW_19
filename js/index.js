@@ -1,5 +1,4 @@
-
-console.log("Your script.js file is loaded correctly!"); 
+console.log("Your index.js file is loaded correctly!"); 
   
   // Scroll Up Button
     const scrollUpBtn = document.getElementById("scrollUpBtn");

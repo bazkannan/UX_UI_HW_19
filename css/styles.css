@@ -45,6 +45,11 @@ body {
     padding-right: 30px;
   }
 
+  body .skillsSection {
+    padding-left: 30px;
+    padding-right: 30px; 
+  }
+
   body .formField {
     padding-left: 30px;
     padding-right: 30px;
@@ -506,11 +511,15 @@ main {
 
 .toolsIKnow {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.toolsCentered {
+  align-items: center; 
+  justify-content: center; 
+}
 .softSkillsIKnow {
   display: flex;
   flex-direction: row;
@@ -1165,4 +1174,87 @@ i {
   color: black; 
   border: 2px; 
   /* Add a white background on hover */
+}
+
+/* Style for accordion items */
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  overflow: hidden; 
+  transition: height 0.3s ease; 
+}
+
+/* Style for accordion headers */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #1C1A1A;
+}
+
+/* Style for accordion titles */
+.accordion-title {
+  margin: 0;
+  font-size: 18px;
+  margin-left: 10px; 
+  align-items: center; 
+  justify-content: center; 
+  padding-left: 10px; 
+}
+
+/* Style for accordion content */
+.accordion-content {
+  display: none;
+  padding: 10px;
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.3s ease; 
+  align-items: center; 
+  justify-content: center; 
+
+}
+
+/* Style for accordion content when expanded */
+.accordion-item.active .accordion-content {
+  display: block;
+  max-height: 500px; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+/* Style for accordion icon */
+.accordion-icon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px; 
+  padding-right: 10px; 
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+#flip {
+  padding: 0px;
+  background-color: transparent;
+  border: solid 1px #c3c3c3;
+  border-radius: 10px; 
+}
+
+#panel {
+  padding: 0px;
+  background-color: transparent;
+  border: solid 1px #c3c3c3;
+  border-radius: 0px; 
+}
+
+.skillsSection {
+  padding-left: 500px;
+  padding-right: 500px; 
 }
