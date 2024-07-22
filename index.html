@@ -41,33 +41,11 @@
       $("#draggable").draggable();
     });
 </script>
-<script> 
-  $(document).ready(function(){
-    $(".accordion-item").click(function(){
-      $(this).find(".accordion-content").slideDown("slow");
-    });
-  });
-  </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const accordionItems = document.querySelectorAll('.accordion-item');
-
-    accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        header.addEventListener('click', function() {
-            item.classList.toggle('active');
-            const icon = header.querySelector('.accordion-icon');
-            icon.textContent = item.classList.contains('active') ? '-' : '+';
-            const content = item.querySelector('.accordion-content');
-            if (item.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                content.style.maxHeight = null;
-            }
-        });
-    });
-});
-</script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -253,116 +231,90 @@
       </blockquote>
     </section>
     <h2 class="sectionTextHeader" id="skillsSection" style="font-variant: small-caps; padding-top: 30px;">My Skills</h2>
-<section class="skillsSection"> 
-    <div class="accordion">
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <h2 class="accordion-title">Front-End Development</h2>
-              <span class="accordion-icon">+</span>
-          </div>
-          <div>
-          <div class="accordion-content">
-            <ul>
-              <li>HTML5 | Proficient</li>
-              <li>CSS3 | Proficient</li>
-              <li>JavaScript | Proficient</li>
-              <li>jQuery | Proficient</li>
-              <li>Bootstrap | Proficient</li>
-            </ul>
-          </div>
-          </div>
-      </div>
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <h2 class="accordion-title">UI / UX Design</h2>
-              <span class="accordion-icon">+</span>
-          </div>
-          <div>
-          <div class="accordion-content">
-            <ul>
-              <li>Figma | Advanced</li>
-              <li>Adobe XD | Proficient</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">
-            <h2 class="accordion-title">Graphic Design</h2>
-            <span class="accordion-icon">+</span>
-        </div>
+
+
+    <section class="skillsSection"> 
+  <div class="accordion">
+    <h3 class="accordion-header">Front-End Development <span class="icon"><i class="fas fa-plus"></i></span></h3>
+    <div class="accordion-content">
         <div>
-        <div class="accordion-content">
+          <ul>
+            <li>HTML5 | Proficient</li>
+            <li>CSS3 | Proficient</li>
+            <li>JavaScript | Proficient</li>
+            <li>jQuery | Proficient</li>
+            <li>Bootstrap | Proficient</li>
+          </ul>
+        </div>
+    </div>
+    <h3 class="accordion-header">UI / UX Design <span class="icon"><i class="fas fa-plus"></i></span></h3>
+    <div class="accordion-content">
+      <div>
+        <ul>
+          <li>Figma | Advanced</li>
+          <li>Adobe XD | Proficient</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="accordion-header">Graphic Design <span class="icon"><i class="fas fa-plus"></i></span></h3>
+    <div class="accordion-content">
+        <div>
           <ul>
             <li>Adobe Photoshop | Advanced</li>
             <li>Adobe Illustrator | Proficient</li>
             <li>Adobe InDesign | Proficient</li>
           </ul>
         </div>
-      </div>
     </div>
-      <!-- Add more accordion items as needed -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-        <h2 class="accordion-title">Film and Animation</h2>
-        <span class="accordion-icon">+</span>
-    </div>
-    <div>
+    <h3 class="accordion-header">Film and Animation <span class="icon"><i class="fas fa-plus"></i></span></h3>
     <div class="accordion-content">
-      <ul>
-        <li>Adobe After Effects | Advanced</li>
-        <li>Adobe Premiere Pro | Advanced</li>
-        <li>Final Cut Pro | Advanced</li>
-        <li>Da Vinci Resolve | Proficient</li>
-      </ul>
+        <div>
+          <ul>
+            <li>Adobe After Effects | Advanced</li>
+            <li>Adobe Premiere Pro | Advanced</li>
+            <li>Final Cut Pro | Advanced</li>
+            <li>Da Vinci Resolve | Proficient</li>
+          </ul>
+        </div>
     </div>
-  </div>
-</div>
-  <!-- Add more accordion items as needed -->
-<div class="accordion-item">
-  <div class="accordion-header">
-      <h2 class="accordion-title">UX Research</h2>
-      <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
-    <div>
-      <div style="padding: 8px;">
-        <h3 style="font-variant: small-caps; text-align: center;">User Research</h3>
-        <p class="extendedParagraph">My approach to user research is to thoroughly understand the needs, motivations and
-          pain points of targeted
-          users to help make products that address the user’s problems. I use tools like Google Forms, SurveyMonkey
-          and online interviews to help extract data and valuable feedback from users for product iterations. This in
-          turn allows me to identify patterns, behaviours, psychology of users along with areas for improvement.
-          Therefore, requiring strong analytical skills to conduct thorough user research. 
-        </p>
-      </div>
-      <div style="padding: 8px;">
-        <h3 style="font-variant: small-caps; text-align: center;">User Empathy</h3>
-        <p>My line of work requires me to put myself in the shoes of the user to really understand their experiences,
-          emotions and wants. One example from my life is where I edit films and motion graphics, where I try to work
-          collaboratively and gather feedback and understand what viewers want to see in a film and help deliver that
-          experience to them. This understanding helps translate to creating products or services that connect with
-          the users. My goal is to ensure that users feel satisfied with their product. The tools I apply to this
-          approach is through the creation of User Persona’s, Storyboards, and Empathy Maps. One example is through
-          designing an app for TFL commuters where we wanted to incentivise users to use Oyster Cards instead of
-          relying on contactless payments. Through conducting usability testing and iterations, this helps me to
-          understand exactly what the user needs are. Just from understanding what the user wants, this helps lead to
-          a 40% increase in engagement.
-        </p>
-      </div>
-      <div style="padding: 8px;">
-        <h3 style="font-variant: small-caps; text-align: center;">Qualitative Interviews</h3>
-        <p>My approach to interviews focuses on asking open-ended and probing questions to target users to really
-          understand their perspective, behaviours and creating an environment that makes the end user comfortable in
-          opening up about their thoughts and feelings. One example is where I interviewed candidates about their
-          experiences with mental health websites, which really helped me to design the website in a way that is
-          conducive to the goals of the target user struggling with mental health.
-        </p>
-      </div>
+    <h3 class="accordion-header">UX Research <span class="icon"><i class="fas fa-plus"></i></span></h3>
+    <div class="accordion-content">
+        <div>
+          <div style="padding: 8px;">
+            <h3 style="font-variant: small-caps; text-align: center;">User Research</h3>
+            <p class="extendedParagraph">My approach to user research is to thoroughly understand the needs, motivations and
+              pain points of targeted
+              users to help make products that address the user’s problems. I use tools like Google Forms, SurveyMonkey
+              and online interviews to help extract data and valuable feedback from users for product iterations. This in
+              turn allows me to identify patterns, behaviours, psychology of users along with areas for improvement.
+              Therefore, requiring strong analytical skills to conduct thorough user research. 
+            </p>
+          </div>
+          <div style="padding: 8px;">
+            <h3 style="font-variant: small-caps; text-align: center;">User Empathy</h3>
+            <p>My line of work requires me to put myself in the shoes of the user to really understand their experiences,
+              emotions and wants. One example from my life is where I edit films and motion graphics, where I try to work
+              collaboratively and gather feedback and understand what viewers want to see in a film and help deliver that
+              experience to them. This understanding helps translate to creating products or services that connect with
+              the users. My goal is to ensure that users feel satisfied with their product. The tools I apply to this
+              approach is through the creation of User Persona’s, Storyboards, and Empathy Maps. One example is through
+              designing an app for TFL commuters where we wanted to incentivise users to use Oyster Cards instead of
+              relying on contactless payments. Through conducting usability testing and iterations, this helps me to
+              understand exactly what the user needs are. Just from understanding what the user wants, this helps lead to
+              a 40% increase in engagement.
+            </p>
+          </div>
+          <div style="padding: 8px;">
+            <h3 style="font-variant: small-caps; text-align: center;">Qualitative Interviews</h3>
+            <p>My approach to interviews focuses on asking open-ended and probing questions to target users to really
+              understand their perspective, behaviours and creating an environment that makes the end user comfortable in
+              opening up about their thoughts and feelings. One example is where I interviewed candidates about their
+              experiences with mental health websites, which really helped me to design the website in a way that is
+              conducive to the goals of the target user struggling with mental health.
+            </p>
+          </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- Add more accordion items as needed -->
 </div>
 </section>
 

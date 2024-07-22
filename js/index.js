@@ -22,45 +22,31 @@ console.log("Your index.js file is loaded correctly!");
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 
+    // Accordion 
+    /* $(document).ready(function() {
+        $(".accordion-header").click(function() {
+            // Close other opened sections
+            $(".accordion-content").not($(this).next()).slideUp();
+    
+            // Toggle the clicked section
+            $(this).next().slideToggle();
+        });
+    }); */ 
 
-   /* const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu'); 
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active'); 
-
-      menuToggle.classList.toggle('active');
-    }); 
-  
-    document.addEventListener('DOM-ContentLoaded', function() {
-      const hamburgerMenu = document.querySelector('.hamburger-menu'); 
-      const navLinks = document.querySelector('.nav-links'); 
-
-      hamburgerMenu.addEventListener('click', function() {
-        navLinks.classList.toggle('active'); 
-        hamburgerMenu.classList.toggle('active'); 
-      });
-    }); */
-
-  // script.js
-
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
-      const accordionItem = header.parentElement;
-      const accordionContent = header.nextElementSibling;
-      
-      if (accordionContent.style.maxHeight) {
-          // Close the currently opened accordion content
-          accordionContent.style.maxHeight = null;
-      } else {
-          // Close all open accordion contents
-          document.querySelectorAll('.accordion-content').forEach(content => {
-              content.style.maxHeight = null;
-          });
-
-          // Open the clicked accordion content
-          accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-      }
-  });
-});
-  
+    $(document).ready(function() {
+        $(".accordion-header").click(function() {
+            // Close other opened sections
+            $(".accordion-content").not($(this).next()).slideUp();
+            $(".accordion-header .icon i").not($(this).find(".icon i"))
+                .removeClass("fa-minus")
+                .addClass("fa-plus");
+    
+            // Toggle the clicked section
+            $(this).next().slideToggle();
+    
+            // Toggle icon for the clicked section
+            $(this).find(".icon i").toggleClass("fa-plus fa-minus");
+        });
+    });
+    
+    

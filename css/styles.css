@@ -1176,82 +1176,40 @@ i {
   /* Add a white background on hover */
 }
 
-/* Style for accordion items */
-.accordion-item {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
-  overflow: hidden; 
-  transition: height 0.3s ease; 
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Style for accordion headers */
 .accordion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: transparent;
   cursor: pointer;
   padding: 10px;
-  background-color: #1C1A1A;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-/* Style for accordion titles */
-.accordion-title {
-  margin: 0;
-  font-size: 18px;
-  margin-left: 10px; 
-  align-items: center; 
-  justify-content: center; 
-  padding-left: 10px; 
+.accordion-header:hover {
+  background-color: #4b4b4b;
 }
 
-/* Style for accordion content */
 .accordion-content {
   display: none;
   padding: 10px;
-  max-height: 0; 
-  overflow: hidden; 
-  transition: max-height 0.3s ease; 
-  align-items: center; 
-  justify-content: center; 
-
+  border-bottom: 1px solid #ccc;
 }
 
-/* Style for accordion content when expanded */
-.accordion-item.active .accordion-content {
-  display: block;
-  max-height: 500px; 
-  align-items: center; 
-  justify-content: center; 
+.accordion-content:last-child {
+  border-bottom: none;
 }
 
-/* Style for accordion icon */
-.accordion-icon {
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 10px; 
-  padding-right: 10px; 
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
-
-#flip {
-  padding: 0px;
-  background-color: transparent;
-  border: solid 1px #c3c3c3;
-  border-radius: 10px; 
-}
-
-#panel {
-  padding: 0px;
-  background-color: transparent;
-  border: solid 1px #c3c3c3;
-  border-radius: 0px; 
+.icon {
+  margin-left: 10px;
+  float: right; 
 }
 
 .skillsSection {
