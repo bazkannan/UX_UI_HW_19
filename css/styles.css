@@ -12,6 +12,10 @@ body {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1080px) {
 
   body {
@@ -94,6 +98,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    text-decoration: none; 
   }
 
   body .toolsIKnow {
@@ -259,6 +264,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
+  text-decoration: none;
   justify-content: space-between;
   align-items: center;
 }
@@ -285,54 +291,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* @media screen and (max-width: 768px) {
-
-
-  .bar.active:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .bar.active:nth-child(2) {
-    opacity: 0;
-  }
-
-  .bar.active:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: black;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 1000;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(135deg);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateT (-8px) rotate(-135deg);
-  }
-} */
-
 .logo a {
   text-decoration: none;
   margin: auto;
@@ -355,6 +313,7 @@ nav ul {
   list-style: none;
   padding: 0;
   display: flex;
+  text-decoration: none; 
   justify-content: space-between;
   align-items: center;
 }
@@ -368,6 +327,7 @@ nav ul li a {
   font-family: "Sarabun", sans-serif;
   color: #333;
   font-weight: 100;
+  text-decoration: none; 
   transition: color 0.3s;
   color: #fff500;
 }
@@ -500,6 +460,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none; 
   justify-content: center;
   gap: 10px;
 }
@@ -715,6 +676,7 @@ blockquote footer {
   font-size: 16px;
   cursor: pointer;
   justify-content: center;
+  text-decoration: none; 
   justify-items: center;
   text-align: center;
   display: flex;
