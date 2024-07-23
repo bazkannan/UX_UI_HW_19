@@ -37,6 +37,7 @@ console.log("Your index.js file is loaded correctly!");
     $(document).ready(function() {
         $(".accordion-header").click(function() {
             // Close other opened sections
+            console.log("you clicked on the Accordion!");
             $(".accordion-content").not($(this).next()).slideUp();
             $(".accordion-header .icon i").not($(this).find(".icon i"))
                 .removeClass("fa-minus")
