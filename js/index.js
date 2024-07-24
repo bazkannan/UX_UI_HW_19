@@ -50,5 +50,19 @@ console.log("Your index.js file is loaded correctly!");
             $(this).find(".icon i").toggleClass("fa-plus fa-minus");
         });
     });
+
+    $(document).ready(function () {
+        // Close the navbar when a link is clicked
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+    });
+
+     // Close the navbar when clicking outside of it
+     $(document).on('click', function (e) {
+        if (!$(e.target).closest('.navbar').length) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
     
     

@@ -27,8 +27,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -55,25 +54,35 @@
 
 <body>
   <header>
-    <nav class="navbar">
+
+    <nav style="background-color: #1C1A1A !important;" class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="logo">
         <a href="#homeSection">B.K.</a>
       </div>
-      <ul class="nav-links">
-        <li class="navMenuItems"><a href="#homeSection">HOME</a></li>
-        <li class="navMenuItems"><a href="#aboutSection">ABOUT ME</a></li>
-        <li class="navMenuItems"><a href="#caseStudiesSection">MY WORK</a></li>
-        <li><a href="#getInTouch" class="nav-bubble">CONTACT</a></li>
-        <!-- Rounded switch 
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-toggle">
-          <span class="slider round"></span>
-        </label> -->
-      </ul>
-    </nav>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-links ml-auto">
+            
+              <li class="nav-item navMenuItems custom-ml-auto">
+                  <a class="nav-link" href="#homeSection">HOME</a>
+              </li>
+              <li class="nav-item navMenuItems custom-ml-auto">
+                  <a class="nav-link" href="#aboutSection">ABOUT ME</a>
+              </li>
+              <li class="nav-item navMenuItems custom-ml-auto">
+                  <a class="nav-link" href="#caseStudiesSection">MY WORK</a>
+              </li>
+              
+              <li class="custom-ml-auto-contact"><a href="#getInTouch" style="padding-left: 30px; padding-right: 30px;" class="nav-bubble nav-link">CONTACT</a></li>
+          </ul>
+      </div>
+  </nav>
   </header>
   <main>
     <section id="homeSection" class="intro">
+      <br></br>
       <h1 class="sectionTextHeader" style="font-variant: small-caps; padding-top: 30px; margin-bottom: -50px;">Who am I?
       </h1>
       <div
@@ -117,7 +126,9 @@
               class="viewWorkButton">Download Resume</button></a>
         </div>
       </div>
-      <h1 id="aboutSection" class="sectionTextHeader" style="font-variant: small-caps; padding-top: 30px;">About Me</h1>
+      <div id="aboutSection">
+        <br></br>
+      <h1 class="sectionTextHeader" style="font-variant: small-caps; padding-top: 30px; padding-bottom: 10px; ">About Me</h1>
       <div class="aboutMeSection">
         <p>My passion for design and creativity began when I was 13 years old, I taught myself how to use Adobe Creative
           Cloud softwares to bring my ideas to life. I am fascinated by the process of being able to create a product
@@ -134,69 +145,91 @@
           UK.
         </p>
       </div>
+    </div>
     </section>
 
     <section class="full-width-section">
-      <div class="content, grid-container">
-        <h1 id="caseStudiesSection" class="sectionTextHeader"
-          style="font-variant: small-caps; padding-top: 30px; color: black;">My Work
+      <div id="caseStudiesSection" class="content, grid-container">
+        <br></br>
+        <div>
+          <nav style="background-color: transparent; display: flex; justify-content: center; align-items: center;" aria-label="breadcrumb">
+            <ol style="background-color: black; justify-content: left; align-items: left;  display: flex; width: 400px; " class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#nsaCaseStudy">Project 1: NSA Case Study</a></li>
+                <li class="breadcrumb-item"><a href="#travelCaseStudy">Project 2: EazyFly Case Study</a></li>
+                <li class="breadcrumb-item"><a href="#digitalOysterCaseStudy">Project 3: Digital Oyster Card Case Study</a></li>
+                <li class="breadcrumb-item"><a href="#saneCaseStudy">Project 4: SANE Case Study</a></li>
+            </ol>
+        </nav>
+        </div>
+        <h1 class="sectionTextHeader"
+          style="font-variant: small-caps; padding-top: 30px; padding-bottom: 10px; color: black;">My Work
         </h1>
-        <div class="gridcell3">
+        <div id="nsaCaseStudy" class="gridcell3">
           <div class="image-hover">
-            <div class="image-container">
+            <div style="height: 400px;" class="image-container">
               <img src="images/NSA Website Redesign Laptop Mockup.jpg" alt="national security agency on laptop">
               <div class="overlay">
-                <h2>Setting up the NSA’s responsive re-design in Figma</h2>
-                <p class="image-container-text">The task was to transform the government agency website to meet the
+                <h2 style="padding-left: 10px; padding-right: 10px; padding-top: 10px; text-align: left; justify-content: left; padding-left: 20px;">Setting up the NSA’s responsive re-design in Figma</h2>
+                <p class="image-container-text nsa-paragraph-text">The task was to transform the government agency website to meet the
                   demands of the users, boost efficiency and lower the difficulty of completing tasks. Here I expand on
                   my journey, from introducing Figma to designing a brand new style guide and colour scheme to introduce
                   something refreshing for users.</p>
+                  <br></br>
                 <a href="case_studies/nsa-govt-agency/HW_Website-UI-Redesign-Case-Study-Baz.pdf" download><button
-                    class="button-case-study">View Case Study</button></a>
+                    style="margin-bottom: 20px;" class="button-case-study">View Case Study PDF</button></a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="projectGrid, grid-container">
-        <div class="gridcell1">
+      
+        <br></br>
+        <div id="travelCaseStudy" class="gridcell1">
           <div class="image-hover">
-            <div class="image-container">
+            <div style="height: 300px;" class="image-container">
               <img src="images/iOS Mockup EazyFly.jpg" alt="travel app mobile">
               <div class="overlay">
-                <h2 style="font-size: 32px;">Mobile Travel App</h2>
-                <p class="image-container-text;">The creation of a travel app for mobile phone devices that address the
+                <h2 style="font-size: 32px; text-align: left; justify-content: left; padding-left: 20px;">Eazyfly - Mobile Travel App</h2>
+                <p style="text-align: left; justify-content: left; padding-left: 20px;" class="image-container-text;">The creation of a travel app for mobile phone devices that address the
                   common frustrations of frequent travellers.</p>
+                  <br></br>
                 <a href="case_studies/travel-app/UI UX Design Portfolio Travel Project.pdf" download><button
-                    class="button-case-study">View Case Study</button></a>
+                    class="button-case-study">View Case Study PDF</button></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="gridcell2">
+        
+        <br></br>
+        <div id="digitalOysterCaseStudy" class="gridcell2">
           <div class="image-hover">
-            <div class="image-container">
+            <div style="height: 300px;" class="image-container">
               <img src="images/iPhone Digi-Oyster App Mockup.jpg" alt="digital oyster card app">
               <div class="overlay">
-                <h2 style="font-size: 32px;">Digital Oyster Card</h2>
-                <p class="image-container-text;">Creating a seamless commuting experience for TFL travellers living in
+                <h2 style="font-size: 32px; text-align: left; justify-content: left; padding-left: 20px;">Digital Oyster Card</h2>
+                <p style="text-align: left; justify-content: left; padding-left: 20px;" class="image-container-text;">Creating a seamless commuting experience for TFL travellers living in
                   London and incentivising them to switch to Oyster Cards from Contactless payments.</p>
+                  <br></br>
                 <a href="case_studies/digi-oyster/UI UX Design Portfolio TFL Project.pdf" download><button
-                    class="button-case-study">View Case Study</button></a>
+                    class="button-case-study">View Case Study PDF</button></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="gridcell3">
+      
+        <br></br>
+        <div id="saneCaseStudy" class="gridcell3">
           <div class="image-hover">
-            <div class="image-container">
+            <div style="height: 300px;" class="image-container">
               <img src="images/SANE Website Redesign Laptop Mockup.jpg" alt="sane mental health web redesign">
               <div class="overlay">
-                <h2 style="font-size: 32px;">SANE - Redesign</h2>
-                <p class="image-container-text;">Redesigning an existing non-profit organisation website that intends to
+                <h2 style="font-size: 32px; text-align: left; justify-content: left; padding-left: 20px;">SANE - Redesign</h2>
+                <p style="text-align: left; justify-content: left; padding-left: 20px;" class="image-container-text;">Redesigning an existing non-profit organisation website that intends to
                   target users who face challenges with mental health.</p>
+                  <br></br>
                 <a href="case_studies/sane-web-redesign/Group Project 2 - Case Study Deck.pdf" download><button
-                    class="button-case-study">View Case Study</button></a>
+                    class="button-case-study">View Case Study PDF</button></a>
               </div>
             </div>
           </div>
@@ -205,8 +238,9 @@
       </div>
     </section>
     <section class="testimonial, testimonialPadding">
-      <h2 class="sectionTextHeader" style="font-variant: small-caps; padding-top: 30px;">What My Clients Say About Me
+      <h2 class="sectionTextHeader" style="font-variant: small-caps; padding-top: 30px; padding-bottom: 10px;">What My Clients Say About Me
       </h2>
+      <div class="testimonialResponsive">
       <blockquote style="border-radius: 8px;">
         <p style="color: black; padding: 24px;">"Baz has been an enormous resource and help to my channel over the last
           couple of months. He started off by completely refreshing my brand image with a new profile picture for
@@ -232,8 +266,9 @@
         <footer style="padding-right: 32px; font-weight: bold; color: black; background-color: #FFF500;">— Sanjay Patel,
           England Kabaddi Union</footer>
       </blockquote>
+    </div>
     </section>
-    <h2 class="sectionTextHeader" id="skillsSection" style="font-variant: small-caps; padding-top: 30px;">My Skills</h2>
+    <h2 class="sectionTextHeader" id="skillsSection" style="font-variant: small-caps; padding-top: 30px; padding-bottom: 10px; ">My Skills</h2>
 
 
     <section class="skillsSection"> 
@@ -332,8 +367,10 @@
     </div>
     <div>
       <section id="getInTouch" class="contact">
-        <h2 class="sectionTextHeader" style="font-variant: small-caps; color: black;">Get In Touch</h2>
-        <form action="#" method="post">
+        <br></br>
+        <h2 class="sectionTextHeader" style="font-variant: small-caps; padding-bottom: 30px; color: black;">Get In Touch</h2>
+        <form action="https://formspree.io/f/xzzpdypw" method="post">
+          <!-- The FormSpree is used to send a submission for Contact https://formspree.io/forms/xzzpdypw/integration -->
           <div class="formField">
             <label for="name" style="color: black;">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
@@ -344,41 +381,43 @@
             <label for="message" style="color: black;">Message</label>
             <textarea id="message" style="font-family: Arial, Helvetica, sans-serif" name="message"
               placeholder="Enter your message"></textarea>
-            <button style="color: white; background-color: black;" type="submit">Send A Message</button>
+            <button style="color: white; background-color: black; margin-top: 10px;" type="submit">Send A Message</button>
           </div>
         </form>
-        <div class="contact-info">
-          <div style="padding: 8px; padding-left: 30px;
-  padding-right: 30px; ">
+        <div class="contact-info formField">
+          <div class="formField" style="padding: 8px; padding-left: 30px;
+  padding-right: 30px;  ">
             <div>
-              <p style="font-weight:bold; color: black; ;" class="sectionTextHeader" ;>Connect with
+              <p style="font-weight:bold; color: black;" class="contactDetailsAlign" ;>Connect with
                 me </p>
             </div>
+            <div class="contact-details">
             <a href="mailto:baz@bazkannan.com">
-              <p style="color: black; font-weight: 100;" class="sectionTextHeader">Email:
+              <p style="color: black; font-weight: 100; font-size: 13px;" class="contactDetailsAlign"><i class="fa fa-envelope" aria-hidden="true"></i>Email:
                 baz@bazkannan.com </p>
             </a>
             <a href="https://uk.linkedin.com/in/bharath-kannan">
-              <p style="color: black; font-weight: 100;" class="sectionTextHeader">LinkedIn:
+              <p style="color: black; font-weight: 100; font-size: 13px;" class="contactDetailsAlign"><i class="fab fa-linkedin"></i>LinkedIn:
                 Bharath Kannan </p>
             </a>
             <a href="https://www.instagram.com/bazzcreative">
-              <p style="color: black; font-weight: 100;" class="sectionTextHeader">Instagram:
+              <p style="color: black; font-weight: 100; font-size: 13px;" class="contactDetailsAlign"><i class="fab fa-instagram"></i>Instagram:
                 @bazzcreative </p>
             </a>
           </div>
-          <div style="padding: 8px; padding-left: 0px;">
-            <p style="font-weight:bold; color: black; justify-content: center;" class="sectionTextHeader" ;>Let's grab a
+          </div>
+          <div style="padding: 8px; padding-left: 30px;">
+            <p style="font-weight:bold; color: black;" class="contactDetailsAlign" ;>Let's grab a
               coffee! </p>
           </div>
-          <div class="coffeeMug">
+          <div class="coffeeMug" style="margin-bottom: 100px; ">
             <img src="https://github.com/bazkannan/UX_Portfolio_Baz/blob/main/img/coffee-575608_1920.png?raw=true"
               alt="coffee mug">
           </div>
         </div>
-        <div id="draggable" class="ui-widget-content">
+        <!-- <div id="draggable" class="ui-widget-content">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!--     stroke="hsl(0 100% 50% / 0.5)"    -->
+             
             <path id="circlePath" fill="black" stroke-width="4" d="
               M 10, 50
               a 40,40 0 1,1 80,0
@@ -389,7 +428,7 @@
               <textPath id="rotating" href="#circlePath"> Grab a coffee with me </textPath>
             </text>
           </svg>
-        </div>
+        </div> -->
         <button id="scrollUpBtn" title="Go to top">GO TO TOP</button>
       </section>
     </div>
